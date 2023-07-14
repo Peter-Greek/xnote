@@ -1,0 +1,197 @@
+/* latin */
+/*	https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap	*/
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
+/*@font-face {*/
+/*	font-family: 'Shadows Into Light';*/
+/*	font-style: normal;*/
+/*	font-weight: 400;*/
+/*	font-display: swap;*/
+/*	src: url(https://fonts.gstatic.com/s/shadowsintolight/v15/UqyNK9UOIntux_czAvDQx_ZcHqZXBNQzdcD5.woff2) format('woff2');*/
+/*	unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;*/
+/*}*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Shadows Into Light", cursive;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	/*background: #decfcf;*/
+}
+
+.card {
+	position: relative;
+	height: 900px;
+	width: 600px;
+	transform-style: preserve-3d;
+	transform: perspective(1000px);
+	box-shadow: 10px 20px 40px rgba(0,0,0,0.25);
+	background: #fff;
+	transition: 1s;
+}
+
+.card .imgBx{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	z-index: 1;
+	transition: 1s;
+}
+
+.card:hover{
+	transform: translateX(50%);
+}
+
+.card:hover .imgBx{
+	transform: rotateY(-180deg);
+}
+
+.card .imgBx img{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+}
+
+.card .imgBx img:nth-child(2){
+	transform: rotateY(180deg);
+}
+
+.card .content{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.card .content h2 {
+	color: #d80016;
+	text-align: center;
+	font-size: 15em;
+	font-weight: 700;
+}
+
+.card .content h2 span {
+	display: block;
+	font-size: 10rem;
+}
+
+.selector {
+	user-drag: none;
+	-webkit-user-drag: none;
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+}
+
+
+#writeNames{
+	outline: none;
+}
+
+
+body {
+	/*background-color: #555;*/
+	/*display: flex;*/
+	/*justify-content: center;*/
+	flex-wrap: wrap;
+}
+
+/* generic styling for the quote */
+#text::before {
+	content: "\"";
+}
+#text::after {
+	content: "\"";
+}
+#title::after {
+	content: " said:";
+	font-size: 20px;
+}
+
+
+/* Styling specific to a sheet of lined paper */
+.sheet{
+	font-family: 'Indie Flower', cursive;
+	background-color: white;
+	background: repeating-linear-gradient(white, white 25px, #9198e5 26px, #9198e5 27px);
+	background-position-y: 49px;
+	height: 100%;
+	width: 100%;
+	padding: 0;
+	/*margin-top: 50px;*/
+	/*margin-left: 15px;*/
+}
+.sheet header {
+	background-color: white;
+	background: linear-gradient(white, white 48px, #9198e5 49px, #9198e5 50px);
+	height: 50px;
+}
+.sheet-title {
+	position: relative;
+	top: 1.5vh;
+	font-size: 30px;
+	font-weight: bold;
+	padding-left: 10px;
+}
+.sheet-text {
+	position: relative;
+	top: 3vh;
+	font-size: 22px;
+	width: 480px;
+	margin: 0 55px;
+	line-height: 27px;
+}
+.margin {
+	width: 49px;
+	height: 100%;
+}
+.l-margin {
+	float: left;
+	border-right: 2px solid pink;
+}
+.r-margin {
+	float: right;
+	border-left: 1px solid pink;
+}
+
+/* Styling for hole punches */
+.l-margin {
+	position: relative;
+}
+.hole {
+	height: 20px;
+	width: 20px;
+	background-color: #555;
+	border-radius: 50%;
+	position: absolute;
+	left: 15px;
+}
+.first-hole {
+	top: 30px;
+}
+.second-hole {
+	top: 50%;
+}
+.third-hole {
+	bottom: 30px;
+}
